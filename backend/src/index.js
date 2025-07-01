@@ -1,5 +1,7 @@
 const express= require("express");
-const dotenv=require("dotenv").config();
+require("dotenv").config();
+const cors = require('cors');
+//const dotenv=require("dotenv").config();
 const dbConnect=require("./config/dbConnect");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes=require("./routes/userRoutes");
@@ -9,6 +11,7 @@ dbConnect();
 const app=express();
 
 //middleware
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(express.json());
 
 //routes

@@ -72,7 +72,7 @@ const login=async(req,res)=>{
       }
 
       //find user by both username and email
-      const user = await User.findOne({username,email}).select("+password");
+      const user = await User.findOne({username,email}).select("+password role");
       if(!user){
          
         return res.status(404).json({message:`User with  ${username} not found`})
@@ -84,15 +84,23 @@ const login=async(req,res)=>{
         return res.status(400).json({message:"Invalid credentails"})
       }
       //generate jwt token
+      //guard
+      if (!process.env.JWT_SECRET) {
+      throw new Error('JWT_SECRET env variable is not set');
+       }
       const token=jwt.sign({id:user._id,role: user.role},process.env.JWT_SECRET,
         {expiresIn:"1h"}
       );
-      res.status(200).json({token});
+      res.status(200).json(
+        {token,role:user.role});
+        console.log("User Role:", user.role);
     }
     
     catch(err){
       console.error(err);
-      res.status(500).json({message:"Something went wrong"})
+      //res.status(500).json({message:"Something went wrong"})
+      res.status(500).json({ message: err.message || "Internal server error" });
+
     }
 };
 
