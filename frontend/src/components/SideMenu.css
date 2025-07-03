@@ -1,0 +1,48 @@
+/* SideMenu.css */
+
+.side-menu {
+  width: 200px;
+  background-color: #002c6f; /* dark blue */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh; /* Full height */
+  color: white;
+}
+
+.side-menu-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.side-menu-top button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.side-menu-top button:hover {
+  background-color: #0056b3;
+}
+
+.side-menu-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.side-menu-bottom button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,17 +1,69 @@
-body {
+/* Reset margins and set height */
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height:100vh;
-  
-  background: linear-gradient(#2A00B7, #42006C);
-
+  padding: 0;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Main wrapper uses flexbox to push footer down */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content grows to fill space before footer */
+.app-content {
+  flex: 1;
+}
+
+/* Optional background */
+body {
+  background: linear-gradient(#2A00B7, #42006C);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Ensure footer sits at the bottom */
+footer {
+  background-color: #14171F;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto; /* Pushes footer to bottom */
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-wrapper main {
+  flex: 1;
+}
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding-bottom: 40px; /* to prevent content from hiding under sticky footer */
+  background-color: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* index.css or App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container > div:first-child {
+  flex: 1;
 }
