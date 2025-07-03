@@ -1,17 +1,19 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // correct import
 import LoginSignup from "./components/LoginSignup/LoginSignup";
-import {BrowserRouter as Router, Routes,Route} from 'react-router'
+import Admin from "./pages/Admin";
+import Partner from "./pages/Partner";
+
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-        <Route path="/" element ={<LoginSignup/>}/>
-        <Route path="/login-user" element ={<h1 >Welcome user!!</h1>}/>
-        <Route path="/login-admin" element ={<h1>Welcome Admin</h1>}/>
+          <Route path="/" element={<LoginSignup />} />
+          <Route path="/login-user" element={<Partner />} />
+          <Route path="/login-admin" element={<Admin />} />
         </Routes>
       </Router>
-      
-      
     </div>
   );
 }

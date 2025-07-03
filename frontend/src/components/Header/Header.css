@@ -1,0 +1,104 @@
+/* src/components/Header.css */
+
+/* --- layout container --- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 24px;
+  background: #f7f7f9;
+  border-bottom: 1px solid #e1e1e6;
+  font-family: "Inter", sans-serif;
+}
+
+/* --- logo (left) --- */
+.logo {
+  font-weight: 700;
+  font-size: 1.50rem;
+  color: #0b5ed7; /* blue similar to mock‑up */
+}
+
+/* --- nav buttons (center) --- */
+.navlinks {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  width:200px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #cfe2ff;     /* light blue */
+  color: #0b5ed7;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background: #a8c9ff;
+}
+
+.nav-btn.active {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+/* --- right side: bell + avatar --- */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bell-btn,
+.avatar-btn {
+  gap:40px;
+  background: #ffe066; /* yellowish */
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bell-btn:hover,
+.avatar-btn:hover {
+  background: #ffd43b;
+}
+
+/* --- dropdown menu --- */
+.avatar-wrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  min-width: 120px;
+  background: #fff;
+  border: 1px solid #e1e1e6;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #d6336c; /* red‑ish for logout */
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+}
