@@ -1,0 +1,80 @@
+/* src/components/pages/ProfilePage.css */
+
+.profile-page {
+  padding: 1.5rem 2rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tier-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.tier-badge.bronze {
+  background-color: #cd7f32;
+}
+
+.tier-badge.silver {
+  background-color: #c0c0c0;
+}
+
+.tier-badge.gold {
+  background-color: #ffd700;
+}
+
+.about-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.points-summary {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.progress-graph {
+  margin-top: 2rem;
+}
+
+.form-section {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.form-section input {
+  padding: 0.4rem;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  padding: 0.4rem 1rem;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-btn {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #40206d, #3c009d);
+background: linear-gradient(to right, #004aad, #007bff);
 }
 
 .page-container {
@@ -14,7 +14,7 @@ body, html {
 .navbar {
   width: 100%;
   background-color: #40206d;
-  background: linear-gradient(to right, #40206d, #3c009d);
+background: linear-gradient(to right, #004aad, #007bff);
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -41,7 +41,7 @@ body, html {
 }
 
 .text {
-  color: #3c009d;
+  color: #007bff;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -50,7 +50,7 @@ body, html {
 .underline {
   width: 50px;
   height: 4px;
-  background: #3c009d;
+  background: #007bff;
   margin: 0 auto 20px auto;
   border-radius: 2px;
 }
@@ -86,7 +86,7 @@ body, html {
 .show-btn {
   background: none;
   border: none;
-  color: #3c009d;
+  color: #007bff;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -99,7 +99,7 @@ body, html {
 
 .submit {
   width: 100%;
-  background-color: #4c00b4;
+  background-color: #007bff;
   color: white;
   padding: 14px 0;
   border-radius: 30px;
@@ -111,7 +111,7 @@ body, html {
 }
 
 .submit:hover {
-  background-color: #3b0092;
+  background-color: #004aad;
 }
 
 .error-msg {

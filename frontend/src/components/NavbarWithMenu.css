@@ -1,0 +1,41 @@
+/* src/components/NavbarWithMenu.css */
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #40206d, #3c009d);
+  padding: 15px 30px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-links {
+  display: flex;
+  gap: 25px;
+}
+
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-links a:hover {
+  text-decoration: underline;
+}
+
+.user-tier {
+  background-color: #004aad;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+}

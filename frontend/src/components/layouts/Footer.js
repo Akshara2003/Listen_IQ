@@ -1,10 +1,11 @@
 // src/components/layouts/Footer.js
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <p>© 2025 ListenIQ. All rights reserved.</p>
+    <footer className="footer">
+      © {new Date().getFullYear()} Listen IQ. All rights reserved.
     </footer>
   );
 };

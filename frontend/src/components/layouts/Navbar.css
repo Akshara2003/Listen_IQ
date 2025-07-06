@@ -1,0 +1,69 @@
+/* src/components/layouts/Navbar.css */
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-left {
+  flex: 0 0 auto;
+}
+
+.navbar-center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  transition: border-bottom 0.2s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  border-bottom: 2px solid white;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}

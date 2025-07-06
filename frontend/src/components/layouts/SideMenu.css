@@ -1,0 +1,99 @@
+.side-menu {
+  width: 220px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #004aad, #007bff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-header {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.side-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tier-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.side-footer {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.contact-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.contact-info {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  margin: 2px 0;
+}
+.side-footer {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.contact-btn {
+  background-color: #ffffff;
+  color: #004aad;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #004aad;
+  color: white;
+  border: 1px solid white;
+}
