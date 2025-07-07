@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // co
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 import Admin from "./pages/Admin";
 import Partner from "./pages/Partner";
+import PartnerManagement from './pages/Admin/PartnerManagement'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
           <Route path="/" element={<LoginSignup />} />
           <Route path="/login-user" element={<Partner />} />
           <Route path="/login-admin" element={<Admin />} />
+          <Route path="/admin-partner_management" element={<PartnerManagement/>}/>
+
         </Routes>
       </Router>
     </div>

@@ -6,4 +6,5 @@ const authorizeRoles=(...allowedRoles)=>{
         next();
     };
 };
+
 module.exports=authorizeRoles;

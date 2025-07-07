@@ -42,12 +42,13 @@ const Login = () => {
         }
       );
 
-      const { token, role } = res.data;
+      const { token, role, username } = res.data;
       console.log("Login successful, role:", role);
 
       // Store token and role
       localStorage.setItem("token", token);
       localStorage.setItem("role", role);
+      localStorage.setItem("username", username);
 
       alert("Login successful!");
 

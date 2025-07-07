@@ -32,7 +32,17 @@ const register=async(req,res)=>{
 
     //Hash and create new user
     const hashedPassword = await bcrypt.hash(password,10);
-    const newUser=new User({username,password:hashedPassword,role,email});
+    const newUser = new User({
+  username,
+  email,
+  password: hashedPassword,
+  role,
+  contactPerson: req.body.contactPerson,
+  phone: req.body.phone,
+  tier: req.body.tier,
+  region: req.body.region,
+});
+
     await newUser.save();
 
     res.status(201).json({message:`User registered with username ${username} and with email ${email}` })
@@ -72,7 +82,8 @@ const login=async(req,res)=>{
       }
 
       //find user by both username and email
-      const user = await User.findOne({username,email}).select("+password role");
+      const user = await User.findOne({ email }).select("+password role username");
+
       if(!user){
          
         return res.status(404).json({message:`User with  ${username} not found`})
@@ -91,9 +102,7 @@ const login=async(req,res)=>{
       const token=jwt.sign({id:user._id,role: user.role},process.env.JWT_SECRET,
         {expiresIn:"1h"}
       );
-      res.status(200).json(
-        {token,role:user.role});
-        console.log("User Role:", user.role);
+      res.status(200).json({ token, role: user.role, username: user.username });
     }
     
     catch(err){

@@ -7,11 +7,18 @@ const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [role, setRole] = useState("");
+  const [username, setUsername] = useState("");
+
 
   useEffect(() => {
-    const storedRole = localStorage.getItem("role");
-    setRole(storedRole);
-  }, []);
+  const storedRole = localStorage.getItem("role");
+  const storedUsername = localStorage.getItem("username");
+  console.log("Role from localStorage:", storedRole);
+  console.log("Username from localStorage:", storedUsername);
+  setRole(storedRole);
+  setUsername(storedUsername);
+}, []);
+
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -34,26 +41,23 @@ const Header = () => {
       )}
 
       <div className="right-side">
-        {role === "user" && <button className="bell-btn">🔔</button>}
-
         {role !== "user" && (
-          <div className="avatar-wrapper">
-            <button
-              className="avatar-btn"
-              onClick={() => setMenuOpen((prev) => !prev)}
-            >
-              👤
-            </button>
+  <div className="avatar-wrapper">
+    <button className="avatar-btn" onClick={() => setMenuOpen((prev) => !prev)}>
+      {username && username !== "undefined" ? username.charAt(0).toUpperCase() : "U"}
+    </button>
 
-            {menuOpen && (
-              <div className="dropdown">
-                <button className="dropdown-item" onClick={handleLogout}>
-                  Logout
-                </button>
-              </div>
-            )}
-          </div>
-        )}
+
+
+          {menuOpen && (
+      <div className="dropdown">
+        <button className="dropdown-item" onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
+    )}
+  </div>
+)}  
       </div>
     </header>
   );
