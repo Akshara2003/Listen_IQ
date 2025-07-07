@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // co
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 import Admin from "./pages/Admin";
 import Partner from "./pages/Partner";
+//import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
